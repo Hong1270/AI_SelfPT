@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.cap">
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".database.ExercisesApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/heart"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@drawable/heart"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Cap."
+        android:usesCleartextTraffic="true">
+        <activity android:name=".GoalSetting"></activity>
+        <activity android:name=".ExerciseResult" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ExerciseSelection" />
+        <activity android:name=".ActivitySelection" />
+        <activity android:name=".Exercise" />
+        <activity android:name=".WeightInput" />
+        <activity android:name=".RmResult" />
+        <activity android:name=".fragment" />
+        <activity android:name=".basicSetting_sex" />
+        <activity android:name=".basicSetting_age" />
+        <activity android:name=".YogaSelection" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.cap"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>

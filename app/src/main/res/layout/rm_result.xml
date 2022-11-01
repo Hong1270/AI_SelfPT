@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="250dp"
+    android:background="@color/background_pink"
+    tools:context=".RmResult">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        android:textSize="25dp"
+        android:text="1RM 결과" />
+
+    <TextView
+
+        android:id="@+id/tvRmResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="___kg"
+        android:textSize="25sp"
+        android:textAlignment="center"
+        android:gravity="center_horizontal" />
+
+    <Button
+        android:id="@+id/OK"
+        android:layout_width="229dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="40dp"
+        android:gravity="center"
+        android:text="OK"
+        style="@style/normal_button" />
+
+</LinearLayout>

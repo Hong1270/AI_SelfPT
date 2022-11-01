@@ -1,0 +1,53 @@
+<resources>
+    <string name="tfe_pn_app_name" translation_description="Posenet demo app built with Posenet library [CHAR_LIMIT=40]">TFL Posenet</string>
+    <string name="tfe_pn_request_permission" translation_description="Request camera permission [CHAR_LIMIT=40]">This app needs camera permission.</string>
+    <string name="tfe_pn_camera_error" translation_description="Error regarding camera support[CHAR_LIMIT=40]">This device doesn\'t support Camera2 API.</string>
+    <string name="app_name">셀피티</string>
+
+    <string name="preference_file_key">user_info</string>
+    <string name="saved_user_gender">gender</string>
+    <string name="saved_user_age">age</string>
+
+    <string name="saved_initial_lat_pull_down">initial_lat_pull_down</string>
+    <string name="saved_initial_bench_press">initial_bench_press</string>
+    <string name="saved_initial_squat">initial_squat</string>
+    <string name="saved_initial_dead_lift">initial_dead_lift</string>
+
+    <string name="saved_rm_lat_pull_down">rm_lat_pull_down</string>
+    <string name="saved_rm_bench_press">rm_bench_press</string>
+    <string name="saved_rm_squat">rm_squat</string>
+    <string name="saved_rm_dead_lift">rm_dead_lift</string>
+
+    <string name="saved_mvic_lat_pull_down1">mvic_lat_pull_down1</string>
+    <string name="saved_mvic_lat_pull_down2">mvic_lat_pull_down2</string>
+    <string name="saved_mvic_lat_pull_down3">mvic_lat_pull_down3</string>
+    <string name="saved_mvic_bench_press1">mvic_bench_press1</string>
+    <string name="saved_mvic_bench_press2">mvic_bench_press2</string>
+    <string name="saved_mvic_bench_press3">mvic_bench_press3</string>
+    <string name="saved_mvic_squat1">mvic_squat1</string>
+    <string name="saved_mvic_squat2">mvic_squat2</string>
+    <string name="saved_mvic_squat3">mvic_squat3</string>
+    <string name="saved_mvic_dead_lift1">mvic_dead_lift1</string>
+    <string name="saved_mvic_dead_lift2">mvic_dead_lift2</string>
+    <string name="saved_mvic_dead_lift3">mvic_dead_lift3</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_main2">test</string>
+
+    <string name="saved_exercise">cur_exercise</string>
+    <string name="saved_time">cur_time</string>
+
+    <string name="mButton">랫풀다운</string>
+    <string name="btn2">벤치프레스</string>
+    <string name="btn3">기본설정</string>
+    <string name="btn4">1RM</string>
+    <string name="btn5">운동하기</string>
+    <string name="title_activity_main">MainActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+</resources>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F9F1F1"
+    android:orientation="vertical"
+    android:padding="@dimen/big_padding">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            style="@style/selection_title"
+            android:text="Athletic field" />
+
+        <ImageButton
+            android:id="@+id/fitness"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/fitness" />
+
+        <ImageButton
+            android:id="@+id/pilates"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="21dp"
+            android:background="@drawable/pilates" />
+
+        <ImageButton
+            android:id="@+id/yoga"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="21dp"
+            android:background="@drawable/yoga" />
+
+    </LinearLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>

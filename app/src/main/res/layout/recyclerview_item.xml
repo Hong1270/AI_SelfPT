@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/analysis_1"
+    android:paddingLeft="50dp"
+    android:paddingVertical="10dp"
+    android:layout_marginBottom="8dp">
+
+    <TextView
+        android:id="@+id/tvDate"
+        style="@style/exercise_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2021-05-11"/>
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/exercise_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="랫풀다운" />
+
+    <TextView
+        android:id="@+id/tvAchievement"
+        style="@style/exercise_achievement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="성취도 75%" />
+</LinearLayout>

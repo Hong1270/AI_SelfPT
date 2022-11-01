@@ -1,0 +1,25 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.mahimrocky:EventCalender:v1.0.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a82bef7f4cb3e6d42fda57d02ca468e3/jetified-EventCalender-v1.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a82bef7f4cb3e6d42fda57d02ca468e3/jetified-EventCalender-v1.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a82bef7f4cb3e6d42fda57d02ca468e3/jetified-EventCalender-v1.0.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4199c9181a50d472f9d668121402f804/jetified-EventCalender-v1.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4199c9181a50d472f9d668121402f804/jetified-EventCalender-v1.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4199c9181a50d472f9d668121402f804/jetified-EventCalender-v1.0.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/16251da07ee654fb5330d0c07e33d2fe/jetified-EventCalender-v1.0.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/16251da07ee654fb5330d0c07e33d2fe/jetified-EventCalender-v1.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/16251da07ee654fb5330d0c07e33d2fe/jetified-EventCalender-v1.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6dffe5e889e9530c082cf77af15b4bb2/jetified-EventCalender-v1.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6dffe5e889e9530c082cf77af15b4bb2/jetified-EventCalender-v1.0.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6dffe5e889e9530c082cf77af15b4bb2/jetified-EventCalender-v1.0.0/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/a511d38775e28b986877d28eecd08865/transformed/jetified-EventCalender-v1.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/a511d38775e28b986877d28eecd08865/transformed/jetified-EventCalender-v1.0.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/a511d38775e28b986877d28eecd08865/transformed/jetified-EventCalender-v1.0.0/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.mahimrocky/EventCalender/v1.0.0/9fabffe2345cdc24d78607b15307228d02422130/EventCalender-v1.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
