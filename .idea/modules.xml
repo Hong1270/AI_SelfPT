@@ -4,7 +4,13 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/cap.iml" filepath="$PROJECT_DIR$/.idea/modules/cap.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/cap.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/cap.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/cap.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/cap.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/cap.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/cap.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/cap.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/cap.app.unitTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/posenet/cap.posenet.iml" filepath="$PROJECT_DIR$/.idea/modules/posenet/cap.posenet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/posenet/cap.posenet.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/posenet/cap.posenet.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/posenet/cap.posenet.main.iml" filepath="$PROJECT_DIR$/.idea/modules/posenet/cap.posenet.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/posenet/cap.posenet.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/posenet/cap.posenet.unitTest.iml" />
     </modules>
   </component>
 </project>

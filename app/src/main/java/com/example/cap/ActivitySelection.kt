@@ -60,12 +60,12 @@ class ActivitySelection : AppCompatActivity() {
             nextIntent.putExtra("activity", "init")
             startActivity(nextIntent)
         }
-        val RM : Button = findViewById(R.id.RM)
-        RM.setOnClickListener {
-            val nextIntent = Intent(this, WeightInput::class.java)
-            nextIntent.putExtra("activity", "rm")
-            startActivity(nextIntent)
-        }
+//        val RM : Button = findViewById(R.id.RM)
+//        RM.setOnClickListener {
+//            val nextIntent = Intent(this, WeightInput::class.java)
+//            nextIntent.putExtra("activity", "rm")
+//            startActivity(nextIntent)
+//        }
         val Exercise : Button = findViewById(R.id.Exercise)
         Exercise.setOnClickListener {
             val nextIntent = Intent(this, GoalSetting::class.java)
@@ -81,14 +81,15 @@ class ActivitySelection : AppCompatActivity() {
             "스쿼트" -> sharedPref.getBoolean(getString(R.string.saved_initial_squat), false)
             else -> sharedPref.getBoolean(getString(R.string.saved_initial_dead_lift), false)
         }
-        val rmSetting = when (curExercise) {
-            "랫풀다운" -> sharedPref.getFloat(getString(R.string.saved_rm_lat_pull_down), 0F)
-            "벤치프레스" -> sharedPref.getFloat(getString(R.string.saved_rm_bench_press), 0F)
-            "스쿼트" -> sharedPref.getFloat(getString(R.string.saved_rm_squat), 0F)
-            else -> sharedPref.getFloat(getString(R.string.saved_rm_dead_lift), 0F)
-        }
+//        val rmSetting = when (curExercise) {
+//            "랫풀다운" -> sharedPref.getFloat(getString(R.string.saved_rm_lat_pull_down), 0F)
+//            "벤치프레스" -> sharedPref.getFloat(getString(R.string.saved_rm_bench_press), 0F)
+//            "스쿼트" -> sharedPref.getFloat(getString(R.string.saved_rm_squat), 0F)
+//            else -> sharedPref.getFloat(getString(R.string.saved_rm_dead_lift), 0F)
+//        }
 
-        Exercise.isEnabled = initialSetting && (rmSetting > 0)
+//        Exercise.isEnabled = initialSetting && (rmSetting > 0)
+        Exercise.isEnabled = initialSetting
     }
 
     override fun onPause() {

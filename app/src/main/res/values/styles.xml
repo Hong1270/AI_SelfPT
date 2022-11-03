@@ -23,11 +23,17 @@
     </style>
 
     <style name="normal_button">
-        <item name="backgroundTint">@color/purple</item>
+        <item name="backgroundTint">@color/button_blue</item>
         <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="background">@drawable/button</item>
-
+    </style>
+    <style name="alert_dialog_button" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="buttonBarPositiveButtonStyle">@style/positive_button</item>
+    </style>
+    <style name="positive_button" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@color/button_blue</item>
     </style>
 </resources>

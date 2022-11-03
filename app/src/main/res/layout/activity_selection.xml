@@ -14,25 +14,26 @@
         android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_gravity="left"
-        android:background="#BB86FC"
+        android:background="#4054bb"
         android:gravity="center_horizontal"
-        android:textAlignment="gravity"
+        android:textAlignment="center"
         android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="랫풀다운 "
-        android:textSize="20dp"/>
+        android:textSize="20dp"
+        tools:text="랫풀다운" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
+        android:layout_marginTop="5dp"
         android:text="다음과 같이 센서를 부착하고 운동을 수행해주세요."
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvExercise"
         android:textSize="16dp"/>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -71,15 +72,15 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <Button
-            android:id="@+id/RM"
-            style="@style/normal_button"
-            android:layout_marginBottom="5dp"
-            android:background="@drawable/button"
-            android:text="1RM 측정"
-            app:layout_constraintBottom_toTopOf="@+id/Exercise"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+<!--        <Button-->
+<!--            android:id="@+id/RM"-->
+<!--            style="@style/normal_button"-->
+<!--            android:layout_marginBottom="5dp"-->
+<!--            android:background="@drawable/button"-->
+<!--            android:text="1RM 측정"-->
+<!--            app:layout_constraintBottom_toTopOf="@+id/Exercise"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent" />-->
 
         <Button
             android:id="@+id/Exercise"

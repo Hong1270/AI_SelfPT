@@ -34,7 +34,7 @@ import kotlin.properties.Delegates
 class Exercise : AppCompatActivity() {
     val TAG = "Exercise"
 
-    lateinit var videoView: VideoView
+//    lateinit var videoView: VideoView
 
     private val exerciseViewModel: ExerciseInfoViewModel by viewModels {
         ExerciseViewModelFactory((application as ExercisesApplication).repository)
@@ -151,16 +151,16 @@ class Exercise : AppCompatActivity() {
                 val tvIterNum: TextView = findViewById(R.id.tvIterNum)
                 tvIterNum.text = "${weight}kg ${rap}회 ${set}세트를 수행해주세요"
             }
-            "rm" -> {
-                interNum = 7
-
-                // 개인 RM과 무게에 따라 적당한 횟수(세트 수) 계산
-//                val weight = intent.extras!!.getInt("weight")
-                weight = intent.extras!!.getInt("weight")
-
-                val tvIterNum: TextView = findViewById(R.id.tvIterNum)
-                tvIterNum.text = "${weight}kg을 7번 반복해주세요!"
-            }
+//            "rm" -> {
+//                interNum = 7
+//
+//                // 개인 RM과 무게에 따라 적당한 횟수(세트 수) 계산
+////                val weight = intent.extras!!.getInt("weight")
+//                weight = intent.extras!!.getInt("weight")
+//
+//                val tvIterNum: TextView = findViewById(R.id.tvIterNum)
+//                tvIterNum.text = "${weight}kg을 7번 반복해주세요!"
+//            }
             else -> {
                 interNum = 3
             }
@@ -168,34 +168,24 @@ class Exercise : AppCompatActivity() {
 
         val startButton: Button = findViewById(R.id.button_capture)
         startButton.setOnClickListener {
-            val tvTimer: TextView = findViewById(R.id.tvTimer)
-
-            var timerFlag = 0
-            var timerCount = 5
-            val handler = object :
-            Handler(Looper.getMainLooper()){
-                override fun handleMessage(msg: Message) {
-                    tvTimer.text = timerCount.toString()
-                    timerCount--
-                    if (timerCount == -1)
-                        tvTimer.visibility = View.INVISIBLE
-                }
-            }
-            thread(start = true){
-                while(timerCount >= 0){
-                    handler.sendEmptyMessage(0)
-                    Thread.sleep(1000)
-                }
-            }
-
-//            var count : Int = 5
-//            timer(period = 1000){
-//                if (count <=0 ){
-//                    tvTimer.visibility = View.INVISIBLE
-//                    cancel()
+////            Timer
+//            val tvTimer: TextView = findViewById(R.id.tvTimer)
+//            var timerFlag = 0
+//            var timerCount = 5
+//            val handler = object :
+//            Handler(Looper.getMainLooper()){
+//                override fun handleMessage(msg: Message) {
+//                    tvTimer.text = timerCount.toString()
+//                    timerCount--
+//                    if (timerCount == -1)
+//                        tvTimer.visibility = View.INVISIBLE
 //                }
-//                tvTimer.text = "${count}"
-//                count--
+//            }
+//            thread(start = true){
+//                while(timerCount >= 0){
+//                    handler.sendEmptyMessage(0)
+//                    Thread.sleep(1000)
+//                }
 //            }
             if (activity == "init")
                 networking("http://192.168.247.217:8080/getMVIC")
@@ -235,7 +225,7 @@ class Exercise : AppCompatActivity() {
             }
         }
 
-        // 테스트용 스킵 버튼
+        // 테스트용 스킵 버튼(운동 완료)
         val skipButton: Button = findViewById(R.id.button_skip)
         skipButton.setOnClickListener {
             val currentTime = System.currentTimeMillis()
@@ -274,27 +264,27 @@ class Exercise : AppCompatActivity() {
                 }
 
                 // RM setting
-                "rm" -> {
-                    val rm: Float = (weight * (1 + 0.025 * 7)).toFloat()
-
-                    when (curExercise) {
-                        "벤치프레스" -> {
-                            editor.putFloat(getString(R.string.saved_rm_bench_press), rm)
-                        }
-                        "스쿼트" -> {
-                            editor.putFloat(getString(R.string.saved_rm_squat), rm)
-                        }
-                        "데드리프트" -> {
-                            editor.putFloat(getString(R.string.saved_rm_dead_lift), rm)
-                        }
-                        else -> {
-                            editor.putFloat(getString(R.string.saved_rm_lat_pull_down), rm)
-                        }
-                    }
-
-                    editor.commit()
-                    Rmpopup()
-                }
+//                "rm" -> {
+//                    val rm: Float = (weight * (1 + 0.025 * 7)).toFloat()
+//
+//                    when (curExercise) {
+//                        "벤치프레스" -> {
+//                            editor.putFloat(getString(R.string.saved_rm_bench_press), rm)
+//                        }
+//                        "스쿼트" -> {
+//                            editor.putFloat(getString(R.string.saved_rm_squat), rm)
+//                        }
+//                        "데드리프트" -> {
+//                            editor.putFloat(getString(R.string.saved_rm_dead_lift), rm)
+//                        }
+//                        else -> {
+//                            editor.putFloat(getString(R.string.saved_rm_lat_pull_down), rm)
+//                        }
+//                    }
+//
+//                    editor.commit()
+//                    Rmpopup()
+//                }
 
                 // Exercise
                 else -> exerciseOK(weight, rap, set)
@@ -613,8 +603,9 @@ class Exercise : AppCompatActivity() {
         nextIntent.putExtra("resultTimes", rap)
         nextIntent.putExtra("resultSet", set)
 
-        val builder = AlertDialog.Builder(this)
+        val builder = AlertDialog.Builder(this, R.style.alert_dialog_button)
         builder.setMessage("운동 완료")
+
         builder.setPositiveButton(
             "OK", { dialogInterface: DialogInterface?, i: Int ->
                 startActivity(nextIntent)
@@ -623,7 +614,7 @@ class Exercise : AppCompatActivity() {
     }
 
     private fun Rmpopup() {
-        val builder = AlertDialog.Builder(this)
+        val builder = AlertDialog.Builder(this, R.style.alert_dialog_button)
         builder.setMessage("설정 완료")
         builder.setPositiveButton(
             "OK"
@@ -638,7 +629,7 @@ class Exercise : AppCompatActivity() {
 
     private fun Setpopup() {
 
-        val builder = AlertDialog.Builder(this)
+        val builder = AlertDialog.Builder(this, R.style.alert_dialog_button)
         builder.setMessage("설정 완료")
         builder.setPositiveButton(
             "OK", { dialogInterface: DialogInterface?, i: Int ->

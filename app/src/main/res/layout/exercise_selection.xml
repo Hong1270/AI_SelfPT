@@ -62,14 +62,6 @@
                 android:layout_marginTop="21dp"
                 android:background="@drawable/deadlift" />
         </LinearLayout>
-        </ScrollView>
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/navigationView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="?android:attr/windowBackground"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toLeftOf="parent"
-            app:menu="@menu/menu_bottomnav" />
+    </ScrollView>
+
 </LinearLayout>

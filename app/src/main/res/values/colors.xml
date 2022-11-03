@@ -11,4 +11,5 @@
 
     <color name="background_pink">#F9F1F1</color>
     <color name="button_light_purple">#BB86FC</color>
+    <color name="button_blue">#4C5CAF</color>
 </resources>

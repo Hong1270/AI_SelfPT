@@ -16,6 +16,9 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/a511d38775e28b986877d28eecd08865/transformed/jetified-EventCalender-v1.0.0/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/a511d38775e28b986877d28eecd08865/transformed/jetified-EventCalender-v1.0.0/AndroidManifest.xml" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/a511d38775e28b986877d28eecd08865/transformed/jetified-EventCalender-v1.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/4c93efd5c990131025aba09a8c3f571f/transformed/jetified-EventCalender-v1.0.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/4c93efd5c990131025aba09a8c3f571f/transformed/jetified-EventCalender-v1.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/4c93efd5c990131025aba09a8c3f571f/transformed/jetified-EventCalender-v1.0.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
