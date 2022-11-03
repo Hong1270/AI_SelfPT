@@ -52,7 +52,7 @@
             <ImageView
                 android:id="@+id/exerciseImg"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="300dp"
                 android:contentDescription="센서 사진"
                 tools:srcCompat="@drawable/info_latpull"/>
         </LinearLayout>

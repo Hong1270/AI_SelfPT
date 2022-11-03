@@ -4,8 +4,13 @@ import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
 import android.content.SharedPreferences
+import android.graphics.Color
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
+import android.os.Message
 import android.util.Log
+import android.view.View
 import android.view.WindowManager
 import android.widget.Button
 import android.widget.TextView
@@ -23,6 +28,7 @@ import java.net.HttpURLConnection
 import java.net.URL
 import java.util.*
 import kotlin.concurrent.thread
+import kotlin.concurrent.timer
 import kotlin.properties.Delegates
 
 class Exercise : AppCompatActivity() {
@@ -162,6 +168,35 @@ class Exercise : AppCompatActivity() {
 
         val startButton: Button = findViewById(R.id.button_capture)
         startButton.setOnClickListener {
+            val tvTimer: TextView = findViewById(R.id.tvTimer)
+
+            var timerFlag = 0
+            var timerCount = 5
+            val handler = object :
+            Handler(Looper.getMainLooper()){
+                override fun handleMessage(msg: Message) {
+                    tvTimer.text = timerCount.toString()
+                    timerCount--
+                    if (timerCount == -1)
+                        tvTimer.visibility = View.INVISIBLE
+                }
+            }
+            thread(start = true){
+                while(timerCount >= 0){
+                    handler.sendEmptyMessage(0)
+                    Thread.sleep(1000)
+                }
+            }
+
+//            var count : Int = 5
+//            timer(period = 1000){
+//                if (count <=0 ){
+//                    tvTimer.visibility = View.INVISIBLE
+//                    cancel()
+//                }
+//                tvTimer.text = "${count}"
+//                count--
+//            }
             if (activity == "init")
                 networking("http://192.168.247.217:8080/getMVIC")
             else if (activity == "exercise") {
