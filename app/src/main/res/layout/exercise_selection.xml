@@ -36,7 +36,7 @@
                 android:layout_width="368dp"
                 android:layout_height="110dp"
                 android:layout_gravity="center"
-                android:background="@drawable/latpulldown_icon" />
+                android:background="@drawable/latpulldown_img" />
 
             <ImageButton
                 android:id="@+id/Bench"
@@ -44,7 +44,7 @@
                 android:layout_height="110dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="21dp"
-                android:background="@drawable/bench" />
+                android:background="@drawable/bench_img" />
 
             <ImageButton
                 android:id="@+id/Squat"
@@ -52,15 +52,15 @@
                 android:layout_height="110dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="21dp"
-                android:background="@drawable/squat" />
+                android:background="@drawable/squat_img" />
 
             <ImageButton
-                android:id="@+id/Deadlift"
+                android:id="@+id/Plank"
                 android:layout_width="368dp"
                 android:layout_height="110dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="21dp"
-                android:background="@drawable/deadlift" />
+                android:background="@drawable/plank_img" />
         </LinearLayout>
     </ScrollView>
 

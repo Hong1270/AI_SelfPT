@@ -53,7 +53,7 @@ class ExerciseSelection : AppCompatActivity() {
             val nextIntent = Intent(this, ActivitySelection::class.java)
             startActivity(nextIntent)
         }
-        val deadlift : ImageButton = findViewById(R.id.Deadlift)
+        val deadlift : ImageButton = findViewById(R.id.Plank)
         deadlift.setOnClickListener {
             editor.putString(getString(R.string.saved_exercise), "데드리프트")
             editor.commit()

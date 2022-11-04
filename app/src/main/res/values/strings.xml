@@ -12,11 +12,13 @@
     <string name="saved_initial_bench_press">initial_bench_press</string>
     <string name="saved_initial_squat">initial_squat</string>
     <string name="saved_initial_dead_lift">initial_dead_lift</string>
+    <string name="saved_initial_plank">initial_plank</string>
 
     <string name="saved_rm_lat_pull_down">rm_lat_pull_down</string>
     <string name="saved_rm_bench_press">rm_bench_press</string>
     <string name="saved_rm_squat">rm_squat</string>
     <string name="saved_rm_dead_lift">rm_dead_lift</string>
+    <string name="saved_rm_plank">rm_plank</string>
 
     <string name="saved_mvic_lat_pull_down1">mvic_lat_pull_down1</string>
     <string name="saved_mvic_lat_pull_down2">mvic_lat_pull_down2</string>
@@ -30,6 +32,10 @@
     <string name="saved_mvic_dead_lift1">mvic_dead_lift1</string>
     <string name="saved_mvic_dead_lift2">mvic_dead_lift2</string>
     <string name="saved_mvic_dead_lift3">mvic_dead_lift3</string>
+
+    <string name="saved_mvic_plank1">mvic_plank1</string>
+    <string name="saved_mvic_plank2">mvic_plank2</string>
+    <string name="saved_mvic_plank3">mvic_plank3</string>
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
