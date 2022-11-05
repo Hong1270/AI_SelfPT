@@ -111,7 +111,7 @@ class ExerciseResult : AppCompatActivity(), ProgressFormatter {
 //        }
 
         button.setOnClickListener {
-            val nextIntent = Intent(this, fragment::class.java)
+            val nextIntent = Intent(this, ExerciseSelection::class.java)
             nextIntent.putExtra("activate", 0)
             startActivity(nextIntent)
         }

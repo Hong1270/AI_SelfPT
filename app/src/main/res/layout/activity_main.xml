@@ -4,23 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
     android:background="@drawable/splash_bg"
-    android:padding="50dp">
+    android:padding="40dp"
+    tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/textView1"
-        android:layout_width="313dp"
-        android:layout_height="152dp"
-        android:layout_marginTop="28dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="내 손안에 \n작은 PT선생님\nAI-Self PT "
         android:textColor="#E5FFFFFF"
-        android:textSize="40dp"
 
+        android:textSize="40dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.313"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
 
     <TextView
         android:id="@+id/textView2"
@@ -29,12 +28,10 @@
         android:text="IoT 기반 인공지능 스마트 헬스케어 시스템 "
         android:textColor="#fff"
         android:textSize="18dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.322"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView1"
-        app:layout_constraintVertical_bias="0.013" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toBottomOf="@+id/textView1" />
 
     <Button
         android:id="@+id/btn_start"
@@ -42,12 +39,27 @@
         android:layout_height="55dp"
         android:background="@drawable/button"
         android:text="시작하기"
-        android:textStyle="bold"
         android:textColor="#000000"
+        android:textStyle="bold"
         app:backgroundTint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="40dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="3dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

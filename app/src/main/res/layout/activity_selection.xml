@@ -54,7 +54,7 @@
                 android:id="@+id/exerciseImg"
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
-                android:contentDescription="센서 사진"
+                android:contentDescription="센서 설명"
                 tools:srcCompat="@drawable/info_latpull"/>
         </LinearLayout>
     </ScrollView>

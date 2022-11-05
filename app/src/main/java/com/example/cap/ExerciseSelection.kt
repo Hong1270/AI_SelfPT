@@ -51,16 +51,28 @@ class ExerciseSelection : AppCompatActivity() {
             Log.i(TAG, "현재 운동: ${sharedPref.getString(getString(R.string.saved_exercise), "값 없음")}")
 
             val nextIntent = Intent(this, ActivitySelection::class.java)
+            nextIntent.putExtra("exercise", "스쿼트")
             startActivity(nextIntent)
         }
-        val deadlift : ImageButton = findViewById(R.id.Plank)
-        deadlift.setOnClickListener {
-            editor.putString(getString(R.string.saved_exercise), "데드리프트")
+//        val deadlift : ImageButton = findViewById(R.id.Plank)
+//        deadlift.setOnClickListener {
+//            editor.putString(getString(R.string.saved_exercise), "플랭크")
+//            editor.commit()
+//
+//            Log.i(TAG, "현재 운동: ${sharedPref.getString(getString(R.string.saved_exercise), "값 없음")}")
+//
+//            val nextIntent = Intent(this, ActivitySelection::class.java)
+//            startActivity(nextIntent)
+//        }
+        val plank : ImageButton = findViewById(R.id.Plank)
+        plank.setOnClickListener {
+            editor.putString(getString(R.string.saved_exercise), "플랭크")
             editor.commit()
 
             Log.i(TAG, "현재 운동: ${sharedPref.getString(getString(R.string.saved_exercise), "값 없음")}")
 
             val nextIntent = Intent(this, ActivitySelection::class.java)
+            nextIntent.putExtra("exercise", "플랭크")
             startActivity(nextIntent)
         }
     }

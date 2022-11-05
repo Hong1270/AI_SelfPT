@@ -55,9 +55,9 @@ class ActivitySelection : AppCompatActivity() {
                 ivSensor.setImageResource(R.drawable.sensor_lat_pulldown)
                 exerciseImg.setImageResource(R.drawable.info_squat)
             }
-            "데드리프트" -> {
+            "플랭크" -> {
                 ivSensor.setImageResource(R.drawable.sensor_lat_pulldown)
-                exerciseImg.setImageResource(R.drawable.info_dead)
+                exerciseImg.setImageResource(R.drawable.plank)
             }
             else -> {
                 ivSensor.setImageResource(R.drawable.sensor_lat_pulldown)
@@ -90,7 +90,8 @@ class ActivitySelection : AppCompatActivity() {
             "랫풀다운" -> sharedPref.getBoolean(getString(R.string.saved_initial_lat_pull_down), false)
             "벤치프레스" -> sharedPref.getBoolean(getString(R.string.saved_initial_bench_press), false)
             "스쿼트" -> sharedPref.getBoolean(getString(R.string.saved_initial_squat), false)
-            else -> sharedPref.getBoolean(getString(R.string.saved_initial_dead_lift), false)
+            "플랭크" -> sharedPref.getBoolean(getString(R.string.saved_initial_plank), false)
+            else -> sharedPref.getBoolean(getString(R.string.saved_initial_plank), false)
         }
 //        val rmSetting = when (curExercise) {
 //            "랫풀다운" -> sharedPref.getFloat(getString(R.string.saved_rm_lat_pull_down), 0F)

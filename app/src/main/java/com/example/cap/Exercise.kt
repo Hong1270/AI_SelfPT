@@ -197,8 +197,8 @@ class Exercise : AppCompatActivity() {
                 when (curExercise) {
                     "랫풀다운" -> {
                         mvic1 = sharedPref.getString(getString(R.string.saved_mvic_lat_pull_down1), "")!!
-                        mvic2 = sharedPref.getString(getString(R.string.saved_mvic_lat_pull_down1), "")!!
-                        mvic3 = sharedPref.getString(getString(R.string.saved_mvic_lat_pull_down1), "")!!
+                        mvic2 = sharedPref.getString(getString(R.string.saved_mvic_lat_pull_down2), "")!!
+                        mvic3 = sharedPref.getString(getString(R.string.saved_mvic_lat_pull_down3), "")!!
                     }
 
                     "벤치프레스" -> {
@@ -213,10 +213,16 @@ class Exercise : AppCompatActivity() {
                         mvic3 = sharedPref.getString(getString(R.string.saved_mvic_squat3), "")!!
                     }
 
+                    "플랭크" -> {
+                        mvic1 = sharedPref.getString(getString(R.string.saved_mvic_plank1), "")!!
+                        mvic2 = sharedPref.getString(getString(R.string.saved_mvic_plank2), "")!!
+                        mvic3 = sharedPref.getString(getString(R.string.saved_mvic_plank3), "")!!
+                    }
+
                     else -> {
-                        mvic1 = sharedPref.getString(getString(R.string.saved_mvic_dead_lift1), "")!!
-                        mvic2 = sharedPref.getString(getString(R.string.saved_mvic_dead_lift2), "")!!
-                        mvic3 = sharedPref.getString(getString(R.string.saved_mvic_dead_lift3), "")!!
+                        mvic1 = sharedPref.getString(getString(R.string.saved_mvic_lat_pull_down1), "")!!
+                        mvic2 = sharedPref.getString(getString(R.string.saved_mvic_lat_pull_down2), "")!!
+                        mvic3 = sharedPref.getString(getString(R.string.saved_mvic_lat_pull_down3), "")!!
                     }
                 }
 
@@ -253,6 +259,9 @@ class Exercise : AppCompatActivity() {
                         }
                         "데드리프트" -> {
                             editor.putBoolean(getString(R.string.saved_initial_dead_lift), true)
+                        }
+                        "플랭크" -> {
+                            editor.putBoolean(getString(R.string.saved_initial_plank), true)
                         }
                         else -> {
                             editor.putBoolean(getString(R.string.saved_initial_lat_pull_down), true)
