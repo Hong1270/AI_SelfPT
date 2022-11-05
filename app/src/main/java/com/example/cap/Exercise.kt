@@ -613,18 +613,18 @@ class Exercise : AppCompatActivity() {
         builder.show()
     }
 
-    private fun Rmpopup() {
-        val builder = AlertDialog.Builder(this, R.style.alert_dialog_button)
-        builder.setMessage("설정 완료")
-        builder.setPositiveButton(
-            "OK"
-        ) { dialogInterface: DialogInterface?, i: Int ->
-            val nextIntent = android.content.Intent(this, RmResult::class.java)
-            startActivity(nextIntent)
-        }
-        builder.show()
-        //Toast.makeText(this,"Hi! I am Toast Message",Toast.LENGTH_SHORT).show()
-    }
+//    private fun Rmpopup() {
+//        val builder = AlertDialog.Builder(this, R.style.alert_dialog_button)
+//        builder.setMessage("설정 완료")
+//        builder.setPositiveButton(
+//            "OK"
+//        ) { dialogInterface: DialogInterface?, i: Int ->
+//            val nextIntent = android.content.Intent(this, RmResult::class.java)
+//            startActivity(nextIntent)
+//        }
+//        builder.show()
+//        //Toast.makeText(this,"Hi! I am Toast Message",Toast.LENGTH_SHORT).show()
+//    }
 
 
     private fun Setpopup() {

@@ -30,10 +30,12 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="background">@drawable/button</item>
     </style>
+
     <style name="alert_dialog_button" parent="Theme.AppCompat.Light.Dialog.Alert">
         <item name="buttonBarPositiveButtonStyle">@style/positive_button</item>
     </style>
     <style name="positive_button" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
         <item name="android:textColor">@color/button_blue</item>
     </style>
+
 </resources>

@@ -100,7 +100,7 @@ class ActivitySelection : AppCompatActivity() {
 //        }
 
 //        Exercise.isEnabled = initialSetting && (rmSetting > 0)
-//        Exercise.isEnabled = initialSetting
+        Exercise.isEnabled = initialSetting && true
     }
 }
 
