@@ -18,6 +18,12 @@ class ActivitySelection : AppCompatActivity() {
             getString(R.string.preference_file_key), Context.MODE_PRIVATE
         )
 
+        val btn_home: ImageButton = findViewById(R.id.button_home)
+        btn_home.setOnClickListener {
+            val nextIntent = Intent(this, ExerciseSelection::class.java)
+            startActivity(nextIntent)
+        }
+
 //        videoView = findViewById(R.id.videoView)
 //        val videoUri = Uri.parse("android.resource://$packageName/${R.raw.lat_pulldown}")
 //        videoView.setMediaController(MediaController(this))

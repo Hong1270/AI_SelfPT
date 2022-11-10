@@ -56,7 +56,7 @@ class ExerciseSelection : AppCompatActivity() {
         }
 //        val deadlift : ImageButton = findViewById(R.id.Plank)
 //        deadlift.setOnClickListener {
-//            editor.putString(getString(R.string.saved_exercise), "플랭크")
+//            editor.putString(getString(R.string.saved_exercise), "데드리프트")
 //            editor.commit()
 //
 //            Log.i(TAG, "현재 운동: ${sharedPref.getString(getString(R.string.saved_exercise), "값 없음")}")

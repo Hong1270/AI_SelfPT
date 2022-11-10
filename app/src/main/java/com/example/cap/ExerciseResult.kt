@@ -61,6 +61,11 @@ class ExerciseResult : AppCompatActivity(), ProgressFormatter {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.exercise_result)
 
+//        확인용 코드(지우기)
+//        val sharedPref1 = getSharedPreferences(getString(
+//            R.string.preference_file_key), Context.MODE_PRIVATE)
+//        Log.i("sex", "sex: " + sharedPref1.getString(getString(R.string.saved_user_gender), "X"))
+
         val sharedPref = getSharedPreferences(
             getString(R.string.preference_file_key), Context.MODE_PRIVATE)
         val curTime = sharedPref.getLong(getString(R.string.saved_time), System.currentTimeMillis())

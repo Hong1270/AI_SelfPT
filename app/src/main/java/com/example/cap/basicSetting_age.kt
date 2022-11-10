@@ -31,7 +31,7 @@ class basicSetting_age :AppCompatActivity() {
 
             Log.i("basicSetting_age", "성별: $info1, 나이: $info2")
 
-            startActivity(Intent(this, fragment::class.java))
+            startActivity(Intent(this, ExerciseSelection::class.java))
         }
     }
 }

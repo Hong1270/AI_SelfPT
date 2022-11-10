@@ -13,6 +13,7 @@ import android.util.Log
 import android.view.View
 import android.view.WindowManager
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.VideoView
 import androidx.activity.viewModels
@@ -118,6 +119,13 @@ class Exercise : AppCompatActivity() {
         savedInstanceState ?: supportFragmentManager.beginTransaction()
             .replace(R.id.camera_preview, PosenetActivity())
             .commit()
+
+        val btn_home: ImageButton = findViewById(R.id.button_home)
+        btn_home.setOnClickListener {
+            val nextIntent = Intent(this, ExerciseSelection::class.java)
+            startActivity(nextIntent)
+        }
+
         /*videoView = findViewById(R.id.vvTest)
         val videoUri = Uri.parse("android.resource://$packageName/${R.raw.vv_test}")
         videoView.setMediaController(MediaController(this))

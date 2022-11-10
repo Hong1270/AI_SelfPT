@@ -16,10 +16,12 @@ class MainActivity : Activity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val btn_start: Button = findViewById(R.id.btn_start)
+        val btn_setting: Button = findViewById(R.id.btn_setting)
 
 //        Text 설정
         val textView1_Data: String = textView1.text.toString() //String 문자열 데이터 취득
         val textView1_builder = SpannableStringBuilder(textView1_Data) //SpannableStringBuilder 타입으로 변환
+
 //        해당 인덱스에 해당하는 문자열에 볼드체 적용
         val boldSpan = StyleSpan(Typeface.BOLD)
         //var startIndex = textView1.text.toString().indexOf("Self PT") //Self PT로 시작하는 인덱스 구하기
@@ -30,6 +32,11 @@ class MainActivity : Activity() {
             //val nextIntent = Intent(this, fragment::class.java)
             //startActivity(nextIntent)
             val nextIntent = Intent(this, ExerciseSelection::class.java)
+            startActivity(nextIntent)
+        }
+
+        btn_setting.setOnClickListener{
+            val nextIntent = Intent(this, basicSetting_sex::class.java)
             startActivity(nextIntent)
         }
     }
