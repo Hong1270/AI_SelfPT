@@ -41,33 +41,59 @@ class ActivitySelection : AppCompatActivity() {
 //            false
 //        }
 
+        //근육 이미지 확대 가능 메세지
+//        Toast.makeText(applicationContext, "근육 이미지를 확대하여 자세한 위치를 확인하세요.", Toast.LENGTH_LONG).show()
 
         val select: TextView = findViewById(R.id.tvExercise)
         val ivSensor: ImageView = findViewById(R.id.ivSensor)
-        val exerciseImg: ImageView = findViewById(R.id.exerciseImg)
+        val exerciseImg1: ImageView = findViewById(R.id.exerciseImg1)
+        val exerciseImg2: ImageView = findViewById(R.id.exerciseImg2)
+        val exerciseImg3: ImageView = findViewById(R.id.exerciseImg3)
+        val tvExerciseImg1: TextView = findViewById(R.id.tvExerciseImg1)
+        val tvExerciseImg2: TextView = findViewById(R.id.tvExerciseImg2)
+        val tvExerciseImg3: TextView = findViewById(R.id.tvExerciseImg3)
 
         val curExercise = sharedPref.getString(getString(R.string.saved_exercise), "값 없음")
         select.text = " $curExercise "
         when (curExercise) {
             "랫풀다운" -> {
                 ivSensor.setImageResource(R.drawable.sensor_lat_pulldown)
-                exerciseImg.setImageResource(R.drawable.info_latpull)
+                exerciseImg1.setImageResource(R.drawable.latissimus_dorsi) //광배근
+                exerciseImg2.setImageResource(R.drawable.anterioir_deltoid) //삼각근 -> 전면삼각근?
+                exerciseImg3.setImageResource(R.drawable.biceps_brachii) //상완이두근
+                tvExerciseImg1.setText("▼광배근▼")
+                tvExerciseImg2.setText("▼삼각근▼")
+                tvExerciseImg3.setText("▼상완이두근▼")
             }
             "벤치프레스" -> {
                 ivSensor.setImageResource(R.drawable.sensor_lat_pulldown)
-                exerciseImg.setImageResource(R.drawable.info_bench)
+                exerciseImg1.setImageResource(R.drawable.pectoralis_major) //대흉근
+                exerciseImg2.setImageResource(R.drawable.anterioir_deltoid) //전면삼각근
+                exerciseImg3.setImageResource(R.drawable.triceps_brachii) //상완삼두근-장두
+                tvExerciseImg1.setText("▼대흉근▼")
+                tvExerciseImg2.setText("▼전면삼각근▼")
+                tvExerciseImg3.setText("▼상완삼두근▼")
             }
             "스쿼트" -> {
                 ivSensor.setImageResource(R.drawable.sensor_lat_pulldown)
-                exerciseImg.setImageResource(R.drawable.info_squat)
+                exerciseImg1.setImageResource(R.drawable.rectus_femoris) //대퇴직근
+                exerciseImg2.setImageResource(R.drawable.vastus_laterlis) //외측광근
+                exerciseImg3.setImageResource(R.drawable.vastus_medialis) //내측광근
+                tvExerciseImg1.setText("▼대퇴직근▼")
+                tvExerciseImg2.setText("▼외측광근▼")
+                tvExerciseImg3.setText("▼내측광근▼")
             }
             "플랭크" -> {
                 ivSensor.setImageResource(R.drawable.sensor_lat_pulldown)
-                exerciseImg.setImageResource(R.drawable.plank)
+                exerciseImg1.setImageResource(R.drawable.info_latpull)
+                exerciseImg2.setImageResource(R.drawable.info_latpull)
+                exerciseImg3.setImageResource(R.drawable.info_latpull)
             }
             else -> {
                 ivSensor.setImageResource(R.drawable.sensor_lat_pulldown)
-                exerciseImg.setImageResource(R.drawable.info_latpull)
+                exerciseImg1.setImageResource(R.drawable.info_latpull)
+                exerciseImg2.setImageResource(R.drawable.info_latpull)
+                exerciseImg3.setImageResource(R.drawable.info_latpull)
             }
         }
 

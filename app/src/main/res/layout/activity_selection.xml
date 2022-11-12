@@ -64,16 +64,53 @@
             <ImageView
                 android:id="@+id/ivSensor"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="200dp"
+                android:layout_marginTop="5dp"
                 android:contentDescription="센서 사진"
                 tools:srcCompat="@drawable/sensor_lat_pulldown" />
-
-            <ImageView
-                android:id="@+id/exerciseImg"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="다음 부위에 센서를 부착해주세요.\n근육 위치 사진을 확대하여 자세한 위치를 확인해 주세요."
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"/>
+            <TextView
+                android:id="@+id/tvExerciseImg1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="근육1"
+                android:layout_gravity="center"/>
+            <com.github.chrisbanes.photoview.PhotoView
+                android:id="@+id/exerciseImg1"
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
-                android:contentDescription="센서 설명"
-                tools:srcCompat="@drawable/info_latpull"/>
+                android:contentDescription="근육 위치1" />
+
+            <TextView
+                android:id="@+id/tvExerciseImg2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="근육2"
+                android:layout_gravity="center"/>
+            <com.github.chrisbanes.photoview.PhotoView
+                android:id="@+id/exerciseImg2"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:contentDescription="근육 위치2" />
+
+            <TextView
+                android:id="@+id/tvExerciseImg3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="근육3"
+                android:layout_gravity="center"/>
+            <com.github.chrisbanes.photoview.PhotoView
+                android:id="@+id/exerciseImg3"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:contentDescription="근육 위치3" />
         </LinearLayout>
     </ScrollView>
     <LinearLayout

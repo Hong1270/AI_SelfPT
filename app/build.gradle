@@ -100,4 +100,7 @@ dependencies {
 
     // Calendar
     implementation 'com.github.mahimrocky:EventCalender:v1.0.0'
+
+    //PhotoView (사진 줌인, 줌아웃)
+    implementation 'com.github.chrisbanes:PhotoView:2.1.3'
 }
