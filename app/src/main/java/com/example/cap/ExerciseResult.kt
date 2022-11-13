@@ -15,6 +15,7 @@ import com.example.cap.database.ExerciseDatabaseDao
 import com.example.cap.database.ExerciseInfoViewModel
 import com.example.cap.database.ExerciseViewModelFactory
 import com.example.cap.database.ExercisesApplication
+import kotlinx.android.synthetic.main.exercise_result.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -26,7 +27,30 @@ import kotlin.concurrent.thread
 
 class ExerciseResult : AppCompatActivity(), ProgressFormatter {
     val feedbackImages = arrayOf(R.drawable.jb_result1, R.drawable.jb_result2, R.drawable.fake_result)
-    val feedbackText = arrayOf("팔을 더 굽히세요", "팔을 더 굽히세요\n팔뚝에 힘을 더 주세요", "자세가 완벽해요\n팔뚝에 힘을 더 주세요")
+//    val feedbackText = arrayOf("팔을 더 굽히세요", "팔을 더 굽히세요\n팔뚝에 힘을 더 주세요", "자세가 완벽해요\n팔뚝에 힘을 더 주세요")
+    val feedback_latpull:Array<String> = arrayOf(
+        "팔꿈치를 바닥 쪽으로 내립니다.",
+        "당기는 위치는 배가 아닌 쇄골 쪽으로 당겨주세요.",
+        "어깨와 팔을 완전히 펴면 어깨에 무리가 갈 수 있으니 주의해주세요.",
+        "바를 내리면 숨을 뱉고 다시 흡입한 상태에서 올라갔다가 내쉬고를 반복합니다."
+)
+    val feedback_bench:Array<String> = arrayOf(
+        "두 다리를 땅에 잘 고정합니다.",
+        "가슴을 펴서 허리를 자연스러운 아치 모양으로 만듭니다.",
+        "바를 내렸다 올리는 과정에서 전완이 바닥과 항상 수직인 상태가 유지되어야 합니다.",
+        "바를 내릴 때 숨을 들이마시고 바를 올릴 때 숨을 뱉습니다."
+    )
+    val feedback_squat:Array<String> = arrayOf(
+        "복부를 조이고 허리를 단단히 세웁니다.",
+        "허벅지가 지면과 수평이 될 때까지 내려갑니다.",
+        "발바닥 중앙으로 강하게 밀어주어 일어납니다.",
+        "내려가면서 숨을 들이마시고 올라오면서 숨을 뱉습니다."
+    )
+    val feedback_plank:Array<String> = arrayOf(
+        "머리부터 발끝까지 일직선이 될 수 있도록 합니다.",
+        "허리가 바닥 쪽으로 내려가지 않도록 배꼽을 위로 당기는 동작을 합니다.",
+        "복부에 힘을 주고 편안히 호흡합니다."
+    )
 
     private val exerciseViewModel: ExerciseInfoViewModel by viewModels {
         ExerciseViewModelFactory((application as ExercisesApplication).repository)
@@ -107,6 +131,25 @@ class ExerciseResult : AppCompatActivity(), ProgressFormatter {
         weight.text = "${weight2}"
         tvTimes.text = "${numTimes}"
         tvSet.text = "${numSet}"
+
+        val curExercise = sharedPref.getString(getString(R.string.saved_exercise), "값 없음")
+        when (curExercise) {
+            "랫풀다운" -> {
+                tvFeedback.text = feedback_latpull[0] + '\n' + feedback_latpull[1]
+            }
+            "벤치프레스" -> {
+                tvFeedback.text = feedback_bench[0] + '\n' + feedback_bench[1]
+            }
+            "스쿼트" -> {
+                tvFeedback.text = feedback_squat[0] + '\n' + feedback_squat[1]
+            }
+            "플랭크" -> {
+                tvFeedback.text = feedback_plank[0] + '\n' + feedback_plank[1]
+            }
+            else -> {
+                tvFeedback.text = feedback_latpull[0] + '\n' + feedback_latpull[1]
+            }
+        }
 
 //        gExerResult.setOnItemClickListener { adapterView: AdapterView<*>, view1: View, i: Int, l: Long ->
 //            ivFeedback.scaleType = ImageView.ScaleType.FIT_XY
