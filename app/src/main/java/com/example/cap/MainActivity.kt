@@ -17,6 +17,7 @@ class MainActivity : Activity() {
         setContentView(R.layout.activity_main)
         val btn_start: Button = findViewById(R.id.btn_start)
         val btn_setting: Button = findViewById(R.id.btn_setting)
+        val btn_con: Button = findViewById(R.id.btn_con)
 
 //        Text 설정
         val textView1_Data: String = textView1.text.toString() //String 문자열 데이터 취득
@@ -37,6 +38,10 @@ class MainActivity : Activity() {
 
         btn_setting.setOnClickListener{
             val nextIntent = Intent(this, basicSetting_sex::class.java)
+            startActivity(nextIntent)
+        }
+        btn_con.setOnClickListener{
+            val nextIntent = Intent(this, Bluetooth::class.java)
             startActivity(nextIntent)
         }
     }

@@ -9,6 +9,13 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+
     <application
         android:name=".database.ExercisesApplication"
         android:allowBackup="true"
@@ -19,7 +26,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Cap."
         android:usesCleartextTraffic="true">
-        <activity android:name=".GoalSetting"></activity>
+        <activity
+            android:name=".Bluetooth"
+            android:exported="false" />
+        <activity android:name=".GoalSetting" />
         <activity android:name=".ExerciseResult" />
         <activity android:name=".MainActivity">
             <intent-filter>
