@@ -61,12 +61,15 @@ public class ConnectedThread extends Thread {
         }
     }
 
-    public int read() {
+    public String read() {
         //converts entered String into bytes
         try {
-            return mmInStream.read();
+            byte[] txt = new byte[mmInStream.available()];
+            mmInStream.read(txt);
+            String str = new String(txt);
+            return str;
         } catch (IOException e) {
-            return 1;
+            return null;
         }
     }
 

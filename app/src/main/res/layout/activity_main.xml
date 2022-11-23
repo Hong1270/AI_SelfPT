@@ -35,7 +35,7 @@
 
     <Button
         android:id="@+id/btn_start"
-        android:layout_width="120dp"
+        android:layout_width="140dp"
         android:layout_height="55dp"
         android:background="@drawable/button"
         android:text="시작하기"
@@ -50,24 +50,24 @@
 
     <Button
         android:id="@+id/btn_setting"
-        android:layout_width="120dp"
+        android:layout_width="140dp"
         android:layout_height="55dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/button"
         android:text="기본설정"
         android:textColor="#000000"
         android:textStyle="bold"
         app:backgroundTint="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_start"
-        app:layout_constraintVertical_bias="0.1" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_start" />
 
     <Button
         android:id="@+id/btn_con"
-        android:layout_width="120dp"
+        android:layout_width="140dp"
         android:layout_height="55dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/button"
         android:text="블루투스 연결"
         android:textColor="#000000"
@@ -78,7 +78,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_setting"
-        app:layout_constraintVertical_bias="0.1" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"

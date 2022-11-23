@@ -192,7 +192,7 @@ public class Bluetooth extends AppCompatActivity {
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
             Toast.makeText(getApplicationContext(), btArrayAdapter.getItem(position), Toast.LENGTH_SHORT).show();
 
-            textStatus.setText("try...");
+            textStatus.setText("상태: 연결중...");
 
             final String name = btArrayAdapter.getItem(position); // get name
             final String address = deviceAddressArray.get(position); // get address
@@ -220,16 +220,16 @@ public class Bluetooth extends AppCompatActivity {
                 btArrayAdapter.clear();
                 btArrayAdapter.notifyDataSetChanged();
                 //홈 화면으로 가기
-                Intent HomeIntent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivityForResult(HomeIntent, 123);
+//                Intent HomeIntent = new Intent(getApplicationContext(), MainActivity.class);
+//                startActivityForResult(HomeIntent, 123);
                 // 데이터 송,수신 스트림을 얻어옵니다.
 //                outputStream = bluetoothSocket.getOutputStream();
-//                inputStream = bluetoothSocket.getInputStream();
+//                inputStream = btSocket.getInputStream();
                 // 데이터 수신 함수 호출
 //                receiveData();
             } catch (IOException e) {
                 e.printStackTrace();
-                textStatus.setText("connection failed!");
+                textStatus.setText("상태: 연결 실패, 다시 시도해 보세요.");
                 flag = false;
                 Toast.makeText(getApplicationContext(), "블루투스 연결 실패!", Toast.LENGTH_LONG).show();
             }
@@ -245,8 +245,9 @@ public class Bluetooth extends AppCompatActivity {
     public void onClickButtonSend(View view){
         if(connectedThread!=null){ connectedThread.write("a"); }
     }
-    public void onClickButtonRec(View view){
+    public void onClickButtonRead(View view){
         if(connectedThread!=null){
+//            String text = connectedThread.read() + "입니다.";
             String text = connectedThread.read() + "입니다.";
             Log.d("받아온 값: ", text); }
     }
